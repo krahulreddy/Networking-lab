@@ -10,7 +10,7 @@ while True:
     sockets_list, a, b = select.select([sys.stdin, c], [], [])
     for s in sockets_list:
     	if s == c:
-            message, addr = server.recv(2048)
+            message, addr = c.recvfrom(2048)
             print message
         else:
             message = raw_input()
