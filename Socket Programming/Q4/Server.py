@@ -16,6 +16,7 @@ def clientthread(conn, addr):
             broadcast(message_to_send, conn) 
         else: 
             remove(conn)   
+
 def broadcast(message, connection): 
     for clients in list_of_clients: 
         if clients!=connection: 
